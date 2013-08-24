@@ -1,0 +1,70 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rfc;
+import java.util.Scanner;
+/**
+ *
+ * @author HACKRO
+ */
+public class Rfc {
+
+    /**
+     * @param args the command line arguments
+     *///nombre.concat(nombre2)
+    //subSequence(0,1)
+    //tolowerCase
+    //trim
+    public static void main(String[] args) {
+        // TODO code application logic here
+Scanner leer = new Scanner(System.in);
+
+    String nombre,appaterno,apmaterno,año,mes,dia,rfc="";
+        System.out.println("***********************Bienvenido***********************\nIngresa los siguientes datos");
+        System.out.println("ingresa tu primer nombre");
+        nombre = leer.nextLine();
+        System.out.println("ingresa tu apellido paterno");
+        appaterno = leer.nextLine();
+        System.out.println("ingresa tu apellido materno");
+        apmaterno = leer.nextLine();
+        System.out.println(" fecha de nacimiento");
+        System.out.println("ingresa el año    ejemplo 1993 ");
+        año = leer.nextLine();
+        System.out.println("ingrese el mes de nacimiento");
+        System.out.println("*1-enero\n*2-febrero\n*3-marzo\n*4-abril\n*5-mayo\n*6-junio\n*7-julio\n*8-agosto\n*9-septiembre\n*10-octubre\n*11-noviembre\n*12-diciembre");
+        mes = leer.nextLine();
+        switch (mes) {
+            case "1":mes = "01";break;
+                case "2":mes = "02";break;
+                    case "3":mes = "03";break;
+                        case "4":mes = "04";break;
+                            case "5":mes = "05";break;
+                                case "6":mes = "06";break;
+                                    case "7":mes = "07";break;
+                                        case "8":mes = "08";break;
+                                            case "9":mes = "09";break;
+                                                case "10":mes = "10";break;
+                                                    case "11":mes = "11";break;
+                                                        case "12":mes = "12";break;
+            default:
+                System.out.println("opcion incorrecta");
+        }
+        System.out.println("ingresa el dia");
+        dia = leer.nextLine();
+        
+        rfc = appaterno.trim().substring(0,2);
+        
+        rfc = rfc.concat(apmaterno.trim().substring(0,1));
+        
+        rfc = rfc.concat(nombre.trim().substring(0,1));
+        rfc = rfc.concat(año.trim().substring(2,4));
+        rfc = rfc.concat(mes);
+rfc= rfc.concat(dia.trim());
+       
+        
+        System.out.println(rfc);
+        
+    
+    }
+}
