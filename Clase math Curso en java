@@ -1,0 +1,89 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package clasemath;
+
+/**
+ *
+ * @author HACKRO
+ */
+public class ClaseMath {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       double x =  1;
+        Secundaria sec = new Secundaria();
+        sec.aleatorio();
+        sec.redondeo(8.5);
+        sec.potencias(2, 3);
+        sec.minimo(179, x);
+        sec.maximo(x, 179);
+        sec.raiz2(8);
+        
+    }
+}
+
+
+/**************************************************************************************************************/
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package clasemath;
+
+/**
+ *
+ * @author HACKRO
+ */
+public class Secundaria {
+    
+    double num,nota,numero,potencia,min,max,raiz;
+    
+    public void aleatorio(){
+        
+        num = Math.random();
+        System.out.println("El numero aleatorio es "+num);
+        
+    }
+    
+    public void redondeo(double NOTA){
+        nota = Math.round(NOTA);
+        System.out.println("Tu calificacion es "+nota);
+        
+    }
+    
+public void potencias(double NUMERO,double POTENCIA){
+    
+    numero = Math.pow(NUMERO, POTENCIA);
+    System.out.println("LA POTENCIA ES DE "+numero);
+    
+}
+
+public void minimo(double MIN,double MAX){
+    
+    min = Math.min(MIN, MAX);
+    System.out.println("el minimo es "+min);
+    
+}
+
+public void maximo(double MIN,double MAX){
+    
+    max = Math.max(MIN, MAX);
+    System.out.println("el maximo es "+max);
+    
+}
+
+public void raiz2(double RAIZ){
+    
+    raiz = Math.sqrt(RAIZ);
+    System.out.println("la raiz es  "+raiz);
+    
+}
+
+
+    
+}
+
