@@ -1,0 +1,45 @@
+package ventaautos;
+import java.util.Scanner;
+/**
+ *
+ * @author HACKRO
+ */
+public class VentaAutos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+/*
+La compañía  El Honesto Carlos,  de venta de carros usados, paga a su personal de ventas un salario de 3200 pesos mensuales,
+mas una comisión de 150 pesos por cada carro vendido, más el 5% del valor de la venta por carro.
+Cada mes el capturista de la empresa ingresa en la computadora los datos pertinentes.
+Diseñar y codificar  un algoritmo que calcule e imprima el salario mensual de un vendedor dado.
+*/
+        
+        Scanner leer = new Scanner(System.in);
+       Scanner leer1 = new Scanner(System.in);
+         String nombre;
+        String opcion;
+        double valor,acumulador=0,bono;
+        
+        System.out.println("ingresa el nombre del vendedor");
+        nombre = leer.nextLine();
+        
+        
+        System.out.println("Deseas iniciar   \n s: SI  n: NO");
+        opcion = leer1.nextLine();
+        
+        while(opcion.equalsIgnoreCase("s")){  
+           System.out.println("ingresa el valor del auto");    
+            valor = leer.nextDouble();
+            bono = valor * 0.5;
+            acumulador = acumulador + bono + 150;
+            System.out.println("deseas ingresar otro auto \n s: SI  n: NO");
+            opcion = leer1.nextLine();
+        }        
+        System.out.println("el total es de "+acumulador);
+ 
+    
+ }
+}
