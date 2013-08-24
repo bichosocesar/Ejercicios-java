@@ -1,0 +1,114 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejercicio;
+import java.util.Scanner;
+
+/**
+ *
+ * @author HACKRO
+ */
+public class Ejercicio {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    Scanner leer = new Scanner(System.in);
+    
+    Secundaria sec = new Secundaria();
+    
+ double altura,base,radio;
+String opt;
+    
+        System.out.println("ingresa la altura de el cilindro");
+       altura = leer.nextDouble();
+        System.out.println("ingresa la base del cilindro");
+        base = leer.nextDouble();
+        System.out.println("ingresa el radio del cilindro");
+           radio = leer.nextDouble();
+             sec.cilindro(altura,base,radio);
+        System.out.println("ingresa una opcion");
+        opt = leer.nextLine();
+            sec.opciones(opt);
+             
+             
+     
+    
+      
+    }
+}
+
+/************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+
+
+
+package ejercicio;
+import java.util.Scanner;
+public class Secundaria {
+    
+    double pi = 3.1416;
+    double radio;
+    double altura;
+    double volumen;
+    /*forma cilindro*/
+    double base;
+    double area;
+    
+    Scanner leer = new Scanner(System.in);
+    public void cilindro(double ALTURA,double BASE,double RADIO){
+        
+       altura = ALTURA;
+       base = BASE;
+       radio = RADIO;
+        
+    }
+    
+    
+    /*volumen pi x r2 x altura.*/
+
+    public void mostrarvolumen(){
+        
+        System.out.println(volumen = (pi * (radio*radio))* altura);
+               
+    }
+     public void muestraarea(){
+        
+         System.out.println(area = ((2*pi)*radio)*altura);     
+    }
+     
+     
+     public void opciones(String OPT){
+         
+         
+            String opt = OPT;
+ 
+        System.out.println("v para mostrar el volumen \n a para mostrar la altura");
+        opt = leer.nextLine();
+        
+        switch (opt) {
+            case "v":
+                
+                System.out.println("el volumen es de ");
+    mostrarvolumen();
+                break;
+            
+                   case "a":
+                
+        System.out.println("el area es de ");
+    muestraarea();
+                break;
+                
+        }             
+                
+         
+     }
+    
+   
+        
+    
+       
+    
+}
