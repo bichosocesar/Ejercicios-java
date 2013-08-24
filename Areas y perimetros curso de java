@@ -1,0 +1,53 @@
+package figuras;
+import java.util.Scanner;
+public class Figuras {
+
+
+        /*calcular el area y perimetro del las figuras triangulo,cuadrado y el rectangulo*/
+            
+    public static void main(String[] args) {
+
+    Scanner leer = new Scanner(System.in);//se crea el objeto scanner
+    int opcion;
+    double lado,altura,perimetro,area,base;
+    
+    
+        System.out.println("Bienvenido\nIngresa la opcion deseada");
+        System.out.println("1:trinagulo\n2:cuadrado\n3:rectangulo");
+        opcion = leer.nextInt();
+        
+        
+        switch (opcion) {
+            case 1:
+                //triangulo
+                System.out.println("ingresa un lado del triangulo");
+                lado = leer.nextDouble();
+                System.out.println("ingresa la altura del triangulo");
+                altura = leer.nextDouble();
+                //perimetro
+                System.out.println("perimetro "+(perimetro = lado * 3)); //18
+                //area
+                System.out.println("area "+(area = ((lado*altura)/2)));//18
+                break;
+                
+                //cuadrado
+            case 2:
+                System.out.println("ingresa un lado del cuadrado");
+                lado = leer.nextDouble();
+                //perimetro
+                perimetro = lado *4;
+                //area
+                area = lado*lado;
+               break;
+                
+            case 3:
+                System.out.println("ingresa la base del rectangulo");
+               
+                break;
+            default:
+                System.out.println("mensajej");
+        }
+        
+        
+    }
+}
