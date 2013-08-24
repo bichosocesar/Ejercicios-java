@@ -1,0 +1,60 @@
+package constructores;
+
+/**
+ *
+ * @author HACKRO
+ */
+public class Constructores {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+     Secundaria sec = new Secundaria("david hackro",22,1.62);
+     sec.mostrardatos();
+     
+     
+           
+    }
+}
+/*********************************************************************************************************************************************************************************************/
+package constructores;
+
+/**
+ *
+ * @author HACKRO
+ */
+public class Secundaria {
+    
+    
+    String nombre;
+    int edad;
+ double estatura;
+    
+    public Secundaria(String NOMBRE,int EDAD){
+    
+    nombre = NOMBRE;
+    edad = EDAD;
+    estatura = 1.67;
+    }
+   
+      public Secundaria(String NOMBRE,int EDAD,double ESTATURA){
+    
+    nombre = NOMBRE;
+    edad = EDAD;
+    estatura = ESTATURA;
+       }
+      
+    public void mostrardatos(){
+        
+        System.out.println("tu nombre es "+nombre);
+        System.out.println("tu edad es "+edad);
+        System.out.println("tu estatura es de "+estatura);
+      
+        
+    }
+    
+    
+    
+}
